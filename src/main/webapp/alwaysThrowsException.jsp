@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
     errorPage="errorHandler.jsp"
-    %>
+%>
 <html>
 <head>
     <title>Throw Exception</title>

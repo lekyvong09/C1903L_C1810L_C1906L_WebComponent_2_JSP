@@ -14,9 +14,13 @@
             </td>
             <td style="width:75%;height:80%;">
 
-                <%
-                    out.println(exception.getMessage());
-                %>
+                    <%-- Scripting - Scriplet --%>
+<%--                <%--%>
+<%--                    out.println(exception.getMessage());--%>
+<%--                %>--%>
+
+                <%-- EL: Expression Language   --%>
+                ${pageContext.exception.message}
 
             </td>
         </tr>
