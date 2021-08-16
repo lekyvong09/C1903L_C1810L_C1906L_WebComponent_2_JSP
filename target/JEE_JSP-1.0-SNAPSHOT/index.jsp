@@ -6,7 +6,7 @@
 </head>
 <body>
 <%--    <%@include file="header.jsp" %>--%>
-    <%@include file="/header.jsp" %>
+    <jsp:include page="/header.jsp" />
     <table style="width: 100%">
         <tr>
             <td style="width:25%;height:80%;" valign="top">
