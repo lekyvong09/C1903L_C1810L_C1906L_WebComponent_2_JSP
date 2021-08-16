@@ -2,12 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Welcome to City Manager</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<%--    <%@include file="header.jsp" %>--%>
+    <%@include file="/header.jsp" %>
+    <table style="width: 100%">
+        <tr>
+            <td style="width:25%;height:80%;" valign="top">
+                <jsp:include page="navbar.jsp" />
+            </td>
+            <td style="width:75%;height:80%;">
+                <h1>Content goes here</h1>
+            </td>
+        </tr>
+    </table>
+
+    <jsp:include page="footer.jsp" />
 </body>
 </html>
