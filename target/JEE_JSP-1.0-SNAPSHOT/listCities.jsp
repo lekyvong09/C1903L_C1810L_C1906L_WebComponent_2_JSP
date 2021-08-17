@@ -17,7 +17,7 @@
                 <%
                     StringBuilder sb = new StringBuilder("<html><body>");
 
-                    DBManager dbm = (DBManager)getServletContext().getAttribute("WorldDBManager");
+                    DBManager dbm = (DBManager)getServletConfig().getServletContext().getAttribute("WorldDBManager");
 
                     try {
                         if (!dbm.isConnected())
