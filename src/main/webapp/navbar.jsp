@@ -11,5 +11,6 @@
     <a href="declarations.jsp">Declaration</a><br>
     <a href="login.jsp">Login</a><br>
     <a href="clearSessionsAndCookies.jsp">Clear Sessions And Cookies</a><br>
+    <a href="startHere.jsp">Page Context</a>
 </body>
 </html>
