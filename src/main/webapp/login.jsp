@@ -23,6 +23,11 @@
                             <td><input name="pwd" type="password" style="width: 250px"/></td>
                         </tr>
                         <tr>
+                            <td colspan="2" align="right">
+                                <input name="noSession" type="checkbox"/>No Session
+                            </td>
+                        </tr>
+                        <tr>
                             <td><input type="submit" value="Sign in" style="width: 250px"/></td>
                         </tr>
 

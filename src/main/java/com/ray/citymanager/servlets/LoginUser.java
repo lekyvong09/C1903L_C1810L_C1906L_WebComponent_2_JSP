@@ -19,6 +19,15 @@ public class LoginUser extends HttpServlet {
 
         String destination = "showUserCredentials.jsp";
 
+        if (request.getParameter("noSession") != null)
+        {
+            String noSession = request.getParameter("noSession");
+            if (noSession.equalsIgnoreCase("ON"))
+            {
+                destination = "showUserCredentials2.jsp";
+            }
+        }
+
         response.sendRedirect(destination);
     }
 }
