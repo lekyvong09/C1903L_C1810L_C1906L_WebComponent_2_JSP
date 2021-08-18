@@ -8,5 +8,6 @@
     <a href="listCities.jsp">CITIES</a><br>
     <a href="listCountries.jsp">COUNTRIES</a><br>
     <a href="alwaysThrowsException.jsp">Exception</a><br>
+    <a href="declarations.jsp">Declaration</a>
 </body>
 </html>
