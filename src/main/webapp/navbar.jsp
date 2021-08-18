@@ -10,5 +10,6 @@
     <a href="alwaysThrowsException.jsp">Exception</a><br>
     <a href="declarations.jsp">Declaration</a><br>
     <a href="login.jsp">Login</a><br>
+    <a href="clearSessionsAndCookies.jsp">Clear Sessions And Cookies</a><br>
 </body>
 </html>

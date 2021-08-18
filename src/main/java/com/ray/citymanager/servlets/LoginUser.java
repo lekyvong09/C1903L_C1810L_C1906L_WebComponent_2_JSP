@@ -17,17 +17,33 @@ public class LoginUser extends HttpServlet {
         s.setAttribute("uid", uid);
         s.setAttribute("pwd", pwd);
 
-        String destination = "showUserCredentials.jsp";
+        int authLevel = 1;
+        s.setAttribute("authLevel", authLevel);
 
-        if (request.getParameter("noSession") != null)
+        String destination = "listCities.jsp";
+
+        if (request.getParameter("rememberMe") != null)
         {
-            String noSession = request.getParameter("noSession");
-            if (noSession.equalsIgnoreCase("ON"))
+            String rememberMe = request.getParameter("rememberMe");
+            if (rememberMe.equalsIgnoreCase("ON"))
             {
-                destination = "showUserCredentials2.jsp";
+                int cookieLife = 3600*24*7;
+
+                Cookie uidCook = new Cookie("credentials_uid", uid);
+                uidCook.setMaxAge(cookieLife);
+
+                Cookie pwdCook = new Cookie("credentials_pwd", pwd);
+                pwdCook.setMaxAge(cookieLife);
+
+                response.addCookie(uidCook);
+                response.addCookie(pwdCook);
             }
         }
 
-        response.sendRedirect(destination);
+        if (authLevel < 1 || uid == null || uid.equals("")) {
+            response.sendRedirect("login.jsp");
+        } else {
+            response.sendRedirect(destination);
+        }
     }
 }
